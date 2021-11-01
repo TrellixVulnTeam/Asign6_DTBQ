@@ -1,0 +1,48 @@
+<div class="auth-wrapper">
+    <form [formGroup] ="form.inputData" (ngSubmit)="UpdateEmployee(employee_id)">
+        <h3>Form-Employee</h3>
+        <div class="form-group">
+            <label>Title : </label>
+            <input type="text" class="form-control" formControlName="title" name="title" id="title" required>
+            <span style="color: red;" *ngIf="Title && Title.touched && Title.invalid">
+                You Must Input Your Title Min 5</span>
+        </div>
+        <div class="form-group">
+            <label>Firstname : </label>
+            <input type="text" class="form-control" formControlName="firstname" name="firstname" id="firstname" required>
+            <span style="color: red;" *ngIf="Firstname && Firstname.touched && Firstname.invalid">
+                You Must Input Your Firstname Min 2</span>
+        </div>
+        <div class="form-group">
+            <label>Lastname : </label>
+            <input type="text" class="form-control" formControlName="lastname" name="lastname" id="lastname" required>
+            <span style="color: red;" *ngIf="Lastname && Lastname.touched && Lastname.invalid">
+                You Must Input Your Lastname Min 2</span>
+        </div>
+        <div class="form-group">
+            <label>Email : </label>
+            <input type="text" class="form-control" formControlName="email" name="email" id="email">
+            <span style="color: red;" *ngIf="Email && Email.touched && Email.invalid">
+                You Must input your email Valid</span>
+        </div>
+        <div class="form-group">
+            <label>Role : </label>
+            <input type="text" class="form-control" formControlName="role" name="role" id="role">
+            <span style="color: red;" *ngIf="Role && Role.touched && Role.invalid">
+                You Must input your Role Valid (0/1)</span>
+        </div>
+        <div class="form-group">
+            <label>Password : </label>
+            <input type="password" class="form-control" formControlName="password" name="password" id="password">
+            <span style="color: red;" *ngIf="Password && Password.touched && Password.invalid">
+                You Must input your password minimum 5 character</span>
+        </div>
+        <div class="form-group">
+            <label>Confirm Password : </label>
+            <input type="password" class="form-control" formControlName="confirmpassword" name="confirmpassword" id="confirmpassword">
+            <span style="color: red;" *ngIf="Confirmpassword && Confirmpassword.touched && Confirmpassword.invalid">
+                You Must input your password minimum 5 character</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Data</button>
+    </form>
+</div>
