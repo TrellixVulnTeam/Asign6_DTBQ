@@ -1,6 +1,6 @@
 <div class="auth-wrapper">
     <form [formGroup] ="form.inputData" (ngSubmit)="UpdateEmployee(employee_id)">
-        <h3>Form-Employee</h3>
+        <h3>Updating Data</h3>
         <div class="form-group">
             <label>Title : </label>
             <input type="text" class="form-control" formControlName="title" name="title" id="title" required>
@@ -43,6 +43,6 @@
             <span style="color: red;" *ngIf="Confirmpassword && Confirmpassword.touched && Confirmpassword.invalid">
                 You Must input your password minimum 5 character</span>
         </div>
-        <button type="submit" class="btn btn-primary">Add Data</button>
+        <button type="submit" class="btn btn-primary">Upate Data</button>
     </form>
 </div>
