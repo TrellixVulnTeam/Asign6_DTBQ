@@ -33,13 +33,13 @@
         </div>
         <div class="form-group">
             <label>Password : </label>
-            <input type="password" class="form-control" formControlName="password" name="password" id="password">
+            <input type="password" class="form-control" formControlName="password" name="password" id="password" >
             <span style="color: red;" *ngIf="Password && Password.touched && Password.invalid">
                 You Must input your password minimum 5 character</span>
         </div>
         <div class="form-group">
             <label>Confirm Password : </label>
-            <input type="password" class="form-control" formControlName="confirmpassword" name="confirmpassword" id="confirmpassword">
+            <input  type="password" class="form-control" formControlName="confirmpassword" name="confirmpassword" id="confirmpassword" >
             <span style="color: red;" *ngIf="Confirmpassword && Confirmpassword.touched && Confirmpassword.invalid">
                 You Must input your password minimum 5 character</span>
         </div>

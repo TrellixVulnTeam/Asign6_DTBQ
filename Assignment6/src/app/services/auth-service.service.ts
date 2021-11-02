@@ -25,11 +25,21 @@ export class AuthServiceService {
       }),catchError(this.handleError)
     )
   }
-  
+
+  getDataUpdated(id:number): Observable<any>{
+    const api = `${this.endpoint}Users/${id}`;
+    return this.http.get(api).pipe(
+      map((res)=>{
+        console.log(res)
+        return res  || {}
+      }),catchError(this.handleError)
+    )
+  }
   updateData(user: employee,id:number): Observable<any>{
     const api = `${this.endpoint}Users/${id}`;
     return this.http.put(api, user).pipe( catchError(this.handleError))
   }
+  
   deleteData(id:number): Observable<any>{
     const api = `${this.endpoint}Users/${id}`;
     alert("Sukses Deleted")

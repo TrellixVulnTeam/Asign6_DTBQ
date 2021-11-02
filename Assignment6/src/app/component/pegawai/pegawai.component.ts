@@ -21,7 +21,6 @@ export class PegawaiComponent implements OnInit {
   setData(){
     this.authService.getData().subscribe(res => {
       this.datas = res
-      console.log(this.datas)
     })
   }
 
